@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <link rel="stylesheet" href="animate.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Fredoka+One|Luckiest+Guy|Quattrocento+Sans|Racing+Sans+One&display=swap" rel="stylesheet">
+      <title>Sneakerpedia</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +14,31 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div>
+      <h1>Sneakerpedia</h1>
+      <div id='title_screen'>
+      <!-- <h1 class="animated jello infinite" style="font-size:200px" id="titleRoll">Sneakerpedia</h1> -->
+      <!-- id='title_image'  -->
+      <section id="loginBox">
+
+         <form id='sign-up'>
+               <h2>Join today and boost your sneaker knowledge!</h2>
+                   <input type="email" name="credentials[email]" placeholder='Enter email...' >
+                   <input type="password" name="credentials[password]" placeholder='Enter password' >
+                   <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password' >
+                   <button>Sign Up</button>
+         </form>
+
+         <form id='sign-in'>
+               <h2>Already a member?</h2>
+                <h2>Sign in!</h2>
+                   <input type="email" name="credentials[email]" placeholder='Enter email...' >
+                   <input type="password" name="credentials[password]" placeholder='Enter password' >
+                   <button>Sign In</button>
+         </form>
+       </section>
+       <img id='title_image' src="https://i.imgur.com/W246ERr.jpg" height=500px width=500px title="source: imgur.com"/>
+       </div>
+     </div>
     </body>
 </html>
