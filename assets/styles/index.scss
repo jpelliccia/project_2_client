@@ -7,8 +7,35 @@ h1 {
   color: #a607f0;
   font-size: 200px;
   font-family: 'Creepster', cursive;
+  // display: flex;
+  // justify-content: center;
+}
+
+ul.no-bullet {
+  list-style-type: none;
+}
+
+li.pumpkin {
+  background: url('../public/pumpkin_bullet.jpg') no-repeat left top;
+    padding-left: 34px;
+    padding-top: 3px;
+    height: 48px;
+    margin-left: 0;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.header_flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+#change-password {
+  color: #0af716
+}
+
+#sign-out {
+  color: #0af716
 }
 
 // #title_image {
@@ -22,6 +49,18 @@ h1 {
 
 body {
   background-color: black;
+}
+
+.card-body {
+  background-color: black;
+}
+
+.success {
+  color: #0af716;
+}
+
+.failure {
+  color: red;
 }
 
 // font-family: 'Fredoka One', cursive;
@@ -46,3 +85,21 @@ body {
   text-shadow: 5px 5px 10px black, 0 0 25px black, 0 0 5px black;
   color: #a607f0;
 }
+
+#brands_panel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-text {
+  color: white;
+}
+
+.card-title {
+  color: white;
+}
+
+// .brand-deck {
+//   border: solid #0af716 5px;
+//   border-radius: 5px;
+// }

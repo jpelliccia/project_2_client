@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="animate.min.css">
+      <!-- <link rel="stylesheet" href="animate.min.css"> -->
       <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Fredoka+One|Luckiest+Guy|Quattrocento+Sans|Racing+Sans+One&display=swap" rel="stylesheet">
       <title>Sneakerpedia</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,13 +15,54 @@
     </head>
     <body>
       <div>
-      <h1>Sneakerpedia</h1>
+        <div class='header_flex'>
+          <section>
+             <form id='change-password'>
+                 <h5>Change Password</h5>
+                 <ul class='no-bullet'>
+                   <li class='pumpkin'><input type="password" name="passwords[old]" placeholder='Enter old password' ></li>
+                   <li class='pumpkin'><input type="password" name="passwords[new]" placeholder='Enter new password' ></li>
+                   <button class="changePasswordButton">Change Password</button>
+                 </ul>
+                   </form>
+                   <br>
+             <form id='sign-out'>
+                   <h5>Sign-out</h5>
+                     <button class="signOutButton">Sign Out</button>
+                   </form>
+           </section>
+      <h1 class='site-title'>Sneakerpedia</h1> <h4 id="message"></h4>
+      </div>
       <div id='title_screen'>
-      <!-- <h1 class="animated jello infinite" style="font-size:200px" id="titleRoll">Sneakerpedia</h1> -->
-      <!-- id='title_image'  -->
-      <section id="loginBox">
+      <!-- <form id='sign-up'>
+        <div class="sign-up-div">
+          <h2>Join today and boost your sneaker knowledge!</h2> -->
+          <!-- Trigger the modal with a button -->
+          <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button> -->
 
-         <form id='sign-up'>
+          <!-- Modal -->
+          <!-- <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Join Today!</h4>
+                </div>
+                <div class="modal-body">
+                  <input type="email" name="credentials[email]" placeholder='Enter email...' >
+                  <input type="password" name="credentials[password]" placeholder='Enter password' >
+                  <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password' >
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form> -->
+      <section id="loginBox">
+   <form id='sign-up'>
                <h2>Join today and boost your sneaker knowledge!</h2>
                    <input type="email" name="credentials[email]" placeholder='Enter email...' >
                    <input type="password" name="credentials[password]" placeholder='Enter password' >
@@ -37,8 +78,43 @@
                    <button>Sign In</button>
          </form>
        </section>
-       <img id='title_image' src="https://i.imgur.com/W246ERr.jpg" height=500px width=500px title="source: imgur.com"/>
+       <img id='title_image' src="./public/Halloween_Foamposite.jpg" height='500px' width='500px' />
        </div>
      </div>
+  <div id='brands_panel'>
+    <div id="Nike" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+      <img class="card-img-top" src="./public/nike_logo.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Nike</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="nike-button">List of Nike Sneakers</a>
+      </div>
+    </div>
+    <br>
+    <div id="Adidas" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+      <img class="card-img-top" src="./public/adidas_logo.jpg" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title">Adidas</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="adidas-button">List of Adidas Sneakers</a>
+      </div>
+    </div>
+    <div id="NB" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+      <img class="card-img-top" src="./public/nb_logo.jpg" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title">New Blance</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="nb-button">List of NB Sneakers</a>
+      </div>
+    </div>
+    <div id="Puma" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 18rem;">
+      <img class="card-img-top" src="./public/puma_logo.jpg" alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title">Puma</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="puma-button">List of Puma Sneakers</a>
+      </div>
+    </div>
+  </div>
     </body>
 </html>
