@@ -3,6 +3,7 @@
 const getFormFields = require('../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('./store.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -41,9 +42,35 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
+const onBrandClick = function (event) {
+  event.preventDefault()
+  if ($(event.target).attr('data-brand') === 'nike') {
+    const nike = store.sneakers.filter(function (sneaker) {
+      return sneaker.brand.id === 1
+    })
+    ui.showSneakerView(nike)
+  } else if ($(event.target).attr('data-brand') === 'adidas') {
+    const adidas = store.sneakers.filter(function (sneaker) {
+      return sneaker.brand.id === 2
+    })
+    ui.showSneakerView(adidas)
+  } else if ($(event.target).attr('data-brand') === 'nb') {
+    const nb = store.sneakers.filter(function (sneaker) {
+      return sneaker.brand.id === 3
+    })
+    ui.showSneakerView(nb)
+  } else if ($(event.target).attr('data-brand') === 'puma') {
+    const puma = store.sneakers.filter(function (sneaker) {
+      return sneaker.brand.id === 4
+    })
+    ui.showSneakerView(puma)
+  }
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onBrandClick
 }

@@ -43,9 +43,20 @@ const signOut = function () {
   })
 }
 
+const sneakerIndex = function () {
+  return $.ajax({
+    method: 'GET',
+    url: config.apiUrl + '/sneakers',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  sneakerIndex
 }

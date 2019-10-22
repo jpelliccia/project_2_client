@@ -3,6 +3,7 @@
     <head>
       <!-- <link rel="stylesheet" href="animate.min.css"> -->
       <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Fredoka+One|Luckiest+Guy|Quattrocento+Sans|Racing+Sans+One&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <title>Sneakerpedia</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,53 +15,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div>
+<div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Change Password / Sign Out
+        </button>
+    <div class="dropdown-menu">
+        <form id='change-password' class="px-4 py-3">
+      <div class="form-group">
+          <ul>
+          <label for="exampleDropdownFormEmail1">Old Password</label>
+          <li class='pumpkin'><input type="password" name="passwords[old]" placeholder='Enter old password' ></li>
+          </ul>
+    </div>
+    <div class="form-group">
+          <ul>
+          <label for="exampleDropdownFormPassword1">New Password</label>
+          <li class='pumpkin'><input type="password" name="passwords[new]" placeholder='Enter new password' ></li>
+          </ul>
+    </div>
+    <div>
+          <button type="submit" class="changePasswordButton">Change Password</button>
+    </div>
+      </form>
+    <form id='sign-out'>
+      <div class="dropdown-divider"></div>
+      <h5> Thanks for stopping by!</h5>
+      <button type="submit" class="signOutButton">Sign out</button>
+    </form>
+  </div>
+  </div>
+
+  <div id='back-button' class="w3-container">
+    <button style="position: absolute;right:0;top:0" class="w3-button w3-xlarge w3-circle w3-grey w3-card-4">Back</button>
+    </div>
         <div class='header_flex'>
-          <section>
-             <form id='change-password'>
-                 <h5>Change Password</h5>
-                 <ul class='no-bullet'>
-                   <li class='pumpkin'><input type="password" name="passwords[old]" placeholder='Enter old password' ></li>
-                   <li class='pumpkin'><input type="password" name="passwords[new]" placeholder='Enter new password' ></li>
-                   <button class="changePasswordButton">Change Password</button>
-                 </ul>
-                   </form>
-                   <br>
-             <form id='sign-out'>
-                   <h5>Sign-out</h5>
-                     <button class="signOutButton">Sign Out</button>
-                   </form>
-           </section>
-      <h1 class='site-title'>Sneakerpedia</h1> <h4 id="message"></h4>
+      <h1 class='site-title'>Sneakerpedia</h1> <h4 id="message"> </h4>
       </div>
       <div id='title_screen'>
-      <!-- <form id='sign-up'>
-        <div class="sign-up-div">
-          <h2>Join today and boost your sneaker knowledge!</h2> -->
-          <!-- Trigger the modal with a button -->
-          <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Join</button> -->
-
-          <!-- Modal -->
-          <!-- <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog modal-sm">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Join Today!</h4>
-                </div>
-                <div class="modal-body">
-                  <input type="email" name="credentials[email]" placeholder='Enter email...' >
-                  <input type="password" name="credentials[password]" placeholder='Enter password' >
-                  <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password' >
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </form> -->
       <section id="loginBox">
    <form id='sign-up'>
                <h2>Join today and boost your sneaker knowledge!</h2>
@@ -82,39 +74,53 @@
        </div>
      </div>
   <div id='brands_panel'>
-    <div id="Nike" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+    <div id="Nike" class="sneaker-box" style="width: 24rem;">
       <img class="card-img-top" src="./public/nike_logo.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Nike</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="nike-button">List of Nike Sneakers</a>
+        <button class="nike-button" data-brand="nike" >List of Nike Sneakers</button>
       </div>
     </div>
     <br>
-    <div id="Adidas" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+    <div id="Adidas" class="sneaker-box" style="width: 24rem;">
       <img class="card-img-top" src="./public/adidas_logo.jpg" alt="Card image cap">
       <div class="card-body">
       <h5 class="card-title">Adidas</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="adidas-button">List of Adidas Sneakers</a>
+      <button class="adidas-button">List of Adidas Sneakers</button>
       </div>
     </div>
-    <div id="NB" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 24rem;">
+    <div id="NB" class="sneaker-box" style="width: 24rem;">
       <img class="card-img-top" src="./public/nb_logo.jpg" alt="Card image cap">
       <div class="card-body">
-      <h5 class="card-title">New Blance</h5>
+      <h5 class="card-title">New Balance</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="nb-button">List of NB Sneakers</a>
+      <button class="nb-button">List of NB Sneakers</button>
       </div>
     </div>
-    <div id="Puma" class="sneaker-box col lg-2 sm-6 paged-1" style="width: 18rem;">
+    <div id="Puma" class="sneaker-box" style="width: 18rem;">
       <img class="card-img-top" src="./public/puma_logo.jpg" alt="Card image cap">
       <div class="card-body">
       <h5 class="card-title">Puma</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="puma-button">List of Puma Sneakers</a>
+      <button class="puma-button">List of Puma Sneakers</button>
       </div>
     </div>
   </div>
+  <div class='row'>
+  <table class="sneaker-table table-bordered col-10 mx-auto table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Color</th>
+      <th scope="col">Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
     </body>
 </html>
