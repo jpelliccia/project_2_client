@@ -5,6 +5,8 @@
 const store = require('./store')
 const api = require('./api')
 const sneakerIndexTemplate = require('./templates/sneakers-index.handlebars')
+const sneakerShowTemplate = require('./templates/sneaker-show.handlebars')
+
 // const authEvents = require('./events.js')
 
 const successMessage = function (newText) {
@@ -21,13 +23,19 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
-  $('#loginBox').hide()
-  $('#title_image').hide()
-  $('#change-password').show()
-  $('#sign-out').show()
-  $('#brands_panel').show()
-  $('#dropdownMenuButton').show()
-  $('#back-button').show()
+  // $('#brands_panel').show()
+  const email = $('#sign-up-email').val()
+  const password = $('#sign-up-password').val()
+  const formFields = {
+    credentials: {
+      email: email,
+      password: password
+    }
+  }
+  api.signIn(formFields)
+    .then(onSignInSuccess)
+    .catch(onSignInFailure)
+  // $('#back-button').show()
 }
 
 const onSignUpFailure = function (response) {
@@ -51,9 +59,10 @@ const onSignInSuccess = function (responseData) {
   $('#title_image').hide()
   $('#change-password').show()
   $('#sign-out').show()
-  $('#brands_panel').show()
+  $('.form-cards').show()
+  // $('#brands_panel').show()
   $('#dropdownMenuButton').show()
-  $('#back-button').hide()
+  // $('#back-button').hide()
   api.sneakerIndex()
     .then(onSneakerIndexSuccess)
     .catch(onSneakerIndexFailure)
@@ -81,7 +90,7 @@ const onSignOutSuccess = function (response) {
   $('#sign-out').hide()
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#back-button').hide()
+  // $('#back-button').hide()
   location.reload()
 }
 
@@ -90,23 +99,64 @@ const onSignOutFailure = function (response) {
   console.log(response)
 }
 
+const onCreateSneakerSuccess = function (response) {
+  api.sneakerIndex().then(onSneakerIndexSuccess).catch(onSneakerIndexFailure)
+  successMessage('Created sneaker successfully!')
+}
+
+const onCreateSneakerFailure = function (response) {
+  failureMessage('Create sneaker failed')
+  console.log(response)
+}
+
+const onUpdateSneakerSuccess = function (repsonse) {
+  api.sneakerIndex().then(onSneakerIndexSuccess).catch(onSneakerIndexFailure)
+  successMessage('Updated sneaker successfully!')
+}
+//
+const onUpdateSneakerFailure = function (response) {
+  failureMessage('Update sneaker failed')
+  console.log(response)
+}
+
 const onSneakerIndexSuccess = function (response) {
   console.log(response)
   store.sneakers = response.sneakers
+  showSneakerView()
 }
 
-const onSneakerIndexFailure = function (response, brand) {
+const onSneakerIndexFailure = function (response) {
   console.log(response)
   console.log('failure')
 }
 
-const showSneakerView = function (brandSneakers) {
-  $('#back-button').show()
-  $('#brands_panel').hide()
+const showSneakerView = function () {
   $('.sneaker-table').show()
-  const sneakerHTML = sneakerIndexTemplate({sneakers: brandSneakers})
+  const sneakerHTML = sneakerIndexTemplate({sneakers: store.sneakers})
   $('.sneaker-table tbody').html('')
   $('.sneaker-table tbody').append(sneakerHTML)
+}
+
+const onShowSneakerSuccess = function (response) {
+  const sneakerHTML = sneakerShowTemplate({sneaker: response.sneaker})
+  $('#delete-show-display').html(sneakerHTML)
+  successMessage('Showed sneaker successfully!')
+}
+
+const onShowSneakerFailure = function (response) {
+  failureMessage('Show sneaker failed')
+  console.log(response)
+}
+
+const onDeleteSneakerSuccess = function (response) {
+  api.sneakerIndex().then(onSneakerIndexSuccess).catch(onSneakerIndexFailure)
+  $('#delete-show-input').val('')
+  successMessage('Deleted sneaker successfully!')
+}
+
+const onDeleteSneakerFailure = function (response) {
+  failureMessage('Delete sneaker failed')
+  console.log(response)
 }
 
 module.exports = {
@@ -120,5 +170,13 @@ module.exports = {
   onSignOutFailure,
   onSneakerIndexSuccess,
   onSneakerIndexFailure,
-  showSneakerView
+  showSneakerView,
+  onCreateSneakerSuccess,
+  onCreateSneakerFailure,
+  onUpdateSneakerSuccess,
+  onUpdateSneakerFailure,
+  onShowSneakerSuccess,
+  onShowSneakerFailure,
+  onDeleteSneakerSuccess,
+  onDeleteSneakerFailure
 }

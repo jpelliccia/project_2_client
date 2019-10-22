@@ -24,13 +24,13 @@
         <form id='change-password' class="px-4 py-3">
       <div class="form-group">
           <ul>
-          <label for="exampleDropdownFormEmail1">Old Password</label>
+          <label for="old=password">Old Password</label>
           <li class='pumpkin'><input type="password" name="passwords[old]" placeholder='Enter old password' ></li>
           </ul>
     </div>
     <div class="form-group">
           <ul>
-          <label for="exampleDropdownFormPassword1">New Password</label>
+          <label for="new-password">New Password</label>
           <li class='pumpkin'><input type="password" name="passwords[new]" placeholder='Enter new password' ></li>
           </ul>
     </div>
@@ -46,9 +46,9 @@
   </div>
   </div>
 
-  <div id='back-button' class="w3-container">
-    <button style="position: absolute;right:0;top:0" class="w3-button w3-xlarge w3-circle w3-grey w3-card-4">Back</button>
-    </div>
+  <!-- <div id='back-button' class="w3-container">
+    <button style="position: absolute;right:0;top:0" class="w3-button w3-xlarge w3-square w3-grey w3-card-4">Back</button>
+    </div> -->
         <div class='header_flex'>
       <h1 class='site-title'>Sneakerpedia</h1> <h4 id="message"> </h4>
       </div>
@@ -56,8 +56,8 @@
       <section id="loginBox">
    <form id='sign-up'>
                <h2>Join today and boost your sneaker knowledge!</h2>
-                   <input type="email" name="credentials[email]" placeholder='Enter email...' >
-                   <input type="password" name="credentials[password]" placeholder='Enter password' >
+                   <input id='sign-up-email' type="email" name="credentials[email]" placeholder='Enter email...' >
+                   <input id='sign-up-password' type="password" name="credentials[password]" placeholder='Enter password' >
                    <input type="password" name="credentials[password_confirmation]" placeholder='Confirm password' >
                    <button>Sign Up</button>
          </form>
@@ -73,7 +73,7 @@
        <img id='title_image' src="./public/Halloween_Foamposite.jpg" height='500px' width='500px' />
        </div>
      </div>
-  <div id='brands_panel'>
+  <!-- <div id='brands_panel'>
     <div id="Nike" class="sneaker-box" style="width: 24rem;">
       <img class="card-img-top" src="./public/nike_logo.jpg" alt="Card image cap">
       <div class="card-body">
@@ -107,12 +107,63 @@
       <button class="puma-button">List of Puma Sneakers</button>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
   <div class='row'>
-  <table class="sneaker-table table-bordered col-10 mx-auto table-dark">
+    <div class='form-cards'>
+      <div class="create-sneaker-table" style="width: 18rem;">
+      <div class="create-body">
+        <h5 class="card-title">Create Sneaker</h5>
+        <form class="create-form">
+          <h6>Name</h6>
+        <input id="create-sneaker-name" type="text" name="credentials[name]" placeholder='Sneaker name' >
+          <h6>Sneaker Color</h6>
+        <input id="create-sneaker-color" type="text" name="credentials[color]" placeholder='Color' >
+          <h6>Release Date</h6>
+        <input id="create-sneaker-date" type="text" name="credentials[release_date]" placeholder='YYYY/MM/DD' >
+        <button class="btn-success">Create Sneaker</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="update-sneaker-table" style="width: 18rem;">
+      <div class="update-body">
+        <h5 class="update-title">Update Sneaker</h5>
+        <form class="update-form">
+          <h6>ID</h6>
+        <input id="update-sneaker-id" type="name" name="credentials[ID]" placeholder='ID #' >
+          <h6>Name</h6>
+        <input id="update-sneaker-name" type="name" name="credentials[name]" placeholder='Sneaker name' >
+          <h6>Sneaker Color</h6>
+        <input id="update-sneaker-color" type="sneaker-color" name="credentials[color]" placeholder='Color' >
+          <h6>Release Date</h6>
+        <input id="update-sneaker-date" type="release_date" name="credentials[release_date]" placeholder='YYYY/MM/DD' >
+        <button class="btn-warning">Update Sneaker</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="delete-show-table" style="width: 18rem;">
+      <div class="delete-show-body">
+        <h5 class="delete-show-title">Show or Delete Sneaker</h5>
+        <form class="delete-show-form">
+          <h6>Sneaker ID</h6>
+          <input id='delete-show-input' required type="number" name="credentials[id]" placeholder='Sneaker ID' >
+          <button id='show-button' class="btn-success">Show Sneaker</button>
+          <button id='delete-button' class="btn-danger">Delete Sneaker</button>
+        </form>
+      </div>
+      <div id='delete-show-display'>
+
+      </div>
+    </div>
+  </div>
+  <table class="sneaker-table table-bordered col-5 mx-auto table-dark">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID #</th>
+      <!-- <th scope="col">Brand ID</th> -->
       <th scope="col">Name</th>
       <th scope="col">Color</th>
       <th scope="col">Release Date</th>

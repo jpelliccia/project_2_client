@@ -95,6 +95,37 @@ border: solid white 1px;
   color: white;
 }
 
-td {
-  // width: 1000px;
+.sneaker-table {
+  margin-top: 50px;
+}
+
+.form-cards {
+  color: white;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.create-form {
+  border: solid #a607f0 5px;
+  border-style: outset;
+}
+
+.update-form {
+  border: solid #a607f0 5px;
+  border-style: outset;
+}
+
+.delete-show-form {
+  border: solid #a607f0 5px;
+  border-style: outset;
+}
+
+.update-body {
+  margin-left: 10px;
+}
+
+.delete-show-body {
+  margin-left: 10px;
 }
