@@ -71,6 +71,7 @@ const onSignInFailure = function (response) {
 }
 
 const onChangePasswordSuccess = function () {
+  $('#change-password').trigger('reset')
   successMessage('Changed password successfully!')
 }
 
@@ -95,6 +96,7 @@ const onSignOutFailure = function (response) {
 
 const onCreateSneakerSuccess = function (response) {
   api.sneakerIndex().then(onSneakerIndexSuccess).catch(onSneakerIndexFailure)
+  $('.create-form').trigger('reset')
   successMessage('Created sneaker successfully!')
 }
 
