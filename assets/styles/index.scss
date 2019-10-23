@@ -7,13 +7,17 @@ h1 {
   color: #a607f0;
   font-size: 200px;
   font-family: 'Creepster', cursive;
-  // display: flex;
-  // justify-content: center;
 }
 
-ul {
-  list-style-image: url('../public/pumpkin_bullet.jpg');
-}
+//------------------------------------------------------------------------------
+
+// ul {
+//   list-style-image: url('../public/pumpkin_bullet.jpg');
+// }
+
+// The code above will place an image as a bullet point
+
+//------------------------------------------------------------------------------
 
 .header_flex {
   display: flex;
@@ -45,13 +49,6 @@ body {
 .failure {
   color: red;
 }
-
-// font-family: 'Fredoka One', cursive;
-// font-family: 'Quattrocento Sans', sans-serif;
-// font-family: 'Luckiest Guy', cursive;
-// font-family: 'Chewy', cursive;
-// font-family: 'Racing Sans One', cursive;
-// font-family: 'Creepster', cursive;
 
 #loginBox {
 
