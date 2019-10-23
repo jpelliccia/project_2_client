@@ -9,36 +9,43 @@ in a table for their viewing.
 
 ## Development Process
 
-- Starting this project I initially used my wire frame to lay down a basic tic tac toe
-layout through HTML with some CSS styling.
-- I then began working on the user API with creating a signIn / signUp login while also
-working on some JavaScript functions.
-- Continued working on JavaScript to complete game functionality and once this was
-figured out I began working on the game API.
-- Worked on the games API by using the store.js to have data collected and using ajax to send a request to the server.
-As we play the game it is constantly being updated with user data such as a games id, a value of 'X' or 'O',
-an index of where in the array the move was made, and over to determine if the game
-was completed or not and we are sent back response data from the server.
-- Finally, I worked on the styling of the game with CSS and made the user experience appealing.
+- Starting this project I wanted to create a sneaker encyclopedia where a user could
+log in and click a brand and see sneakers associated with that brand with pictures,
+descriptions and link on where to buy the sneaker.
+- My relations where going to be a user has_many sneakers, brand has_many sneakers,
+and sneakers belongs_to user/brand.
+- After having difficulty and being time restricted I decided to switch up the whole
+idea and created a sneaker log where a user could just create a sneaker and have it
+stored in a table associated to their account. This could be either a sneaker wishlist
+or a user's actual sneaker inventory.
+- The new relation I used now was user has_many sneakers and sneakers belongs_to
+user.
+- It was easy to transition to this because I already had all the info and down down,
+I just scrapped the idea of brands and already had user and sneakers. This made everything
+run smoother for me and was able to complete the project requirements.
 
 
 ## WireFrames / User Stories
 
+https://imgur.com/xxTBDTL
+https://imgur.com/CjMTR3M
+https://imgur.com/D6B3kpn
 
 
-- As a user, I would like to create a username and start a new game.
-- As a user, I would like to start a new game upon winning or losing & keep playing.
-- As a user, I would like a list of instructions on how to play so I can enhance my skill.
-- As a user, I would like a nice prompt message telling me I have won/lost.
+- As a user, I would like to create a sneaker and add it to my collection.
+- As a user, I would like to search different sneakers by brands.
+- As a user, I would like to sign up/in/out and change my password.
+- As a user, I would like to update a sneaker associated to my account.
 - As a user, I would like a clean layout that is visually appealing.
 - As a user, I would like success and error messages informing me after I have done actions.
+- As a user, I would like to delete a sneaker if I made one by mistake.
 
 ## Future Additions
 
 - Create a brands section with clickable brand images that display a specific brands sneakers.
 - Let a user create a sneaker and upload an image of the sneaker.
 - Create information for each sneaker with links on where to purchase the sneaker.
-- Fix front end desgin to give it a more clean look and shift aw
+- Fix front end desgin to give it a more clean look.
 
 
 ## Technologies
