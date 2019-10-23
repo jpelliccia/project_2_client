@@ -24,7 +24,7 @@ was completed or not and we are sent back response data from the server.
 
 ## WireFrames / User Stories
 
-https://i.imgur.com/KJf46D7.jpg?1
+
 
 - As a user, I would like to create a username and start a new game.
 - As a user, I would like to start a new game upon winning or losing & keep playing.
@@ -36,10 +36,9 @@ https://i.imgur.com/KJf46D7.jpg?1
 ## Future Additions
 
 - Create a brands section with clickable brand images that display a specific brands sneakers.
-- Be able to track the amount of games each specific user has played, and their
-wins / losses.
-- Play audio sound for when you click each square and for when you win the game.
-- Hightlight a row when a user has won the game.
+- Let a user create a sneaker and upload an image of the sneaker.
+- Create information for each sneaker with links on where to purchase the sneaker.
+- Fix front end desgin to give it a more clean look and shift aw
 
 
 ## Technologies

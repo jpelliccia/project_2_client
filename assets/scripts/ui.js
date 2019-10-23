@@ -35,24 +35,21 @@ const onSignUpSuccess = function () {
   api.signIn(formFields)
     .then(onSignInSuccess)
     .catch(onSignInFailure)
-  // $('#back-button').show()
 }
 
 const onSignUpFailure = function (response) {
   failureMessage('Sign up failed')
   $('#sign-up').trigger('reset')
-  console.log(response)
+  // console.log(response)
 }
 
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
-  console.log('responseData is', responseData)
+  // console.log('responseData is', responseData)
   // save the `user` we got from the API inside of `store`
   // so we can use it later, from any file
   store.user = responseData.user
-  console.log('store is', store)
-  // $('#change-password').show()
-  // $('#sign-out').show()
+  // console.log('store is', store)
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#loginBox').hide()
@@ -60,9 +57,8 @@ const onSignInSuccess = function (responseData) {
   $('#change-password').show()
   $('#sign-out').show()
   $('.form-cards').show()
-  // $('#brands_panel').show()
   $('#dropdownMenuButton').show()
-  // $('#back-button').hide()
+
   api.sneakerIndex()
     .then(onSneakerIndexSuccess)
     .catch(onSneakerIndexFailure)
@@ -71,8 +67,7 @@ const onSignInSuccess = function (responseData) {
 const onSignInFailure = function (response) {
   failureMessage('Sign in failed')
   $('#sign-in').trigger('reset')
-  console.log(response)
-  // location.reload() // ???????????
+  // console.log(response)
 }
 
 const onChangePasswordSuccess = function () {
@@ -81,7 +76,7 @@ const onChangePasswordSuccess = function () {
 
 const onChangePasswordFailure = function (response) {
   failureMessage('Change password failed')
-  console.log(response)
+  // console.log(response)
 }
 
 const onSignOutSuccess = function (response) {
@@ -90,13 +85,12 @@ const onSignOutSuccess = function (response) {
   $('#sign-out').hide()
   $('#sign-up').show()
   $('#sign-in').show()
-  // $('#back-button').hide()
   location.reload()
 }
 
 const onSignOutFailure = function (response) {
   failureMessage('Sign out failed')
-  console.log(response)
+  // console.log(response)
 }
 
 const onCreateSneakerSuccess = function (response) {
@@ -106,28 +100,29 @@ const onCreateSneakerSuccess = function (response) {
 
 const onCreateSneakerFailure = function (response) {
   failureMessage('Create sneaker failed')
-  console.log(response)
+  // console.log(response)
 }
 
 const onUpdateSneakerSuccess = function (repsonse) {
   api.sneakerIndex().then(onSneakerIndexSuccess).catch(onSneakerIndexFailure)
+  $('.update-form').trigger('reset')
   successMessage('Updated sneaker successfully!')
 }
-//
+
 const onUpdateSneakerFailure = function (response) {
   failureMessage('Update sneaker failed')
-  console.log(response)
+  // console.log(response)
 }
 
 const onSneakerIndexSuccess = function (response) {
-  console.log(response)
+  // console.log(response)
   store.sneakers = response.sneakers
   showSneakerView()
 }
 
 const onSneakerIndexFailure = function (response) {
-  console.log(response)
-  console.log('failure')
+  // console.log(response)
+  // console.log('failure')
 }
 
 const showSneakerView = function () {
@@ -145,7 +140,7 @@ const onShowSneakerSuccess = function (response) {
 
 const onShowSneakerFailure = function (response) {
   failureMessage('Show sneaker failed')
-  console.log(response)
+  // console.log(response)
 }
 
 const onDeleteSneakerSuccess = function (response) {
@@ -156,7 +151,7 @@ const onDeleteSneakerSuccess = function (response) {
 
 const onDeleteSneakerFailure = function (response) {
   failureMessage('Delete sneaker failed')
-  console.log(response)
+  // console.log(response)
 }
 
 module.exports = {

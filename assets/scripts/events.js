@@ -7,7 +7,7 @@ const ui = require('./ui.js')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('test')
+  // console.log('test')
   const form = event.target
   const formData = getFormFields(form)
   api.signUp(formData)
@@ -91,37 +91,11 @@ const onShowSneaker = function (event) {
     .catch(ui.onShowSneakerFailure)
 }
 
-// const onBrandClick = function (event) {
-//   event.preventDefault()
-//   if ($(event.target).attr('data-brand') === 'nike') {
-//     const nike = store.sneakers.filter(function (sneaker) {
-//       return sneaker.brand.id === 1
-//     })
-//     ui.showSneakerView(nike)
-//   } else if ($(event.target).attr('data-brand') === 'adidas') {
-//     const adidas = store.sneakers.filter(function (sneaker) {
-//       return sneaker.brand.id === 2
-//     })
-//     ui.showSneakerView(adidas)
-//   } else if ($(event.target).attr('data-brand') === 'nb') {
-//     const nb = store.sneakers.filter(function (sneaker) {
-//       return sneaker.brand.id === 3
-//     })
-//     ui.showSneakerView(nb)
-//   } else if ($(event.target).attr('data-brand') === 'puma') {
-//     const puma = store.sneakers.filter(function (sneaker) {
-//       return sneaker.brand.id === 4
-//     })
-//     ui.showSneakerView(puma)
-//   }
-// }
-
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onSignOut,
-  // onBrandClick,
   onCreateSneaker,
   onSneakerIndex,
   onUpdateSneaker,

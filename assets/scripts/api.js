@@ -83,7 +83,7 @@ const updateSneaker = function (id, name, color, releaseDate) {
       sneaker: {
         name: name,
         color: color,
-        releaseDate: releaseDate,
+        release_date: releaseDate,
         brand_id: 1,
         user_id: store.user.id
       }
