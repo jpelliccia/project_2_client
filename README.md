@@ -1,4 +1,4 @@
-![Sneakerpedia](https://imgur.com/nqVZA0q)
+![Sneakerpedia](/desktop/Sneakerpedia.jpg)
 
 # Sneakerpedia
 
