@@ -1,11 +1,12 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+![Sneakerpedia](https://imgur.com/nqVZA0q)
 
-## Sneakerpedia Project
+# Sneakerpedia
 
-For this project we desgined our own backend API using Ruby on Rails and had to decide
-what we would like to create. Since I have a love for sneakers I decided to create an
-encyclopedia called, "Sneakerpedia", which a user can create sneakers and have them listed
-in a table for their viewing.
+I developed a sneaker log where a user is able to sign up and log their favorite sneakers, their
+collection or a wishlist of potential sneakers they may want to buy within a table by addidng the
+sneakers name, color, and release date. The table of created sneakers is specific to each user.
+I am a huge collector of sneakers and wanted something to store the names of all the sneakers I own
+and also list sneakers I am interest in buying. I believe this can help people track and log their sneakers as well!
 
 ## Development Process
 
@@ -33,7 +34,6 @@ https://imgur.com/D6B3kpn
 
 
 - As a user, I would like to create a sneaker and add it to my collection.
-- As a user, I would like to search different sneakers by brands.
 - As a user, I would like to sign up/in/out and change my password.
 - As a user, I would like to update a sneaker associated to my account.
 - As a user, I would like a clean layout that is visually appealing.
@@ -46,6 +46,7 @@ https://imgur.com/D6B3kpn
 - Let a user create a sneaker and upload an image of the sneaker.
 - Create information for each sneaker with links on where to purchase the sneaker.
 - Fix front end desgin to give it a more clean look.
+- Create a buy and sell table for people to list profits made off selling sneakers.
 
 
 ## Technologies
@@ -60,9 +61,9 @@ For this project I used:
 * Ruby on Rails
 * Handlebars
 
-## Setup
+## Installing
 1) To run this project, fork and clone this GitHub repository.
-2) Checkout into a new branch.
+
 3) Install dependencies with npm install.
 4) Run grunt serve to pull up the local host and run this project locally.
 
