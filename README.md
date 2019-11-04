@@ -1,4 +1,4 @@
-![Sneakerpedia](/desktop/Sneakerpedia.jpg)
+<a href="https://imgur.com/nqVZA0q"><img src="https://i.imgur.com/nqVZA0q.png" title="source: imgur.com" /></a>
 
 # Sneakerpedia
 
@@ -28,10 +28,7 @@ run smoother for me and was able to complete the project requirements.
 
 ## WireFrames / User Stories
 
-https://imgur.com/xxTBDTL
-https://imgur.com/CjMTR3M
-https://imgur.com/D6B3kpn
-
+<a href="https://imgur.com/xxTBDTL"><img src="https://i.imgur.com/xxTBDTL.jpg" title="source: imgur.com" /></a>
 
 - As a user, I would like to create a sneaker and add it to my collection.
 - As a user, I would like to sign up/in/out and change my password.
@@ -61,11 +58,21 @@ For this project I used:
 * Ruby on Rails
 * Handlebars
 
-## Installing
-1) To run this project, fork and clone this GitHub repository.
+## Website Link
 
-3) Install dependencies with npm install.
-4) Run grunt serve to pull up the local host and run this project locally.
+https://jpelliccia.github.io/project_2_client/
+
+## API Reference
+
+https://github.com/jpelliccia/project_2_api
+
+## Installing
+1. To run this project
+``` fork and clone this GitHub repository.```
+2. Clone this repo.
+3. Install dependencies with ```npm install```.
+4. Run ```grunt serve``` to pull up the local host and run this project locally.
+
 
 ## [License](LICENSE)
 
